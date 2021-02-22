@@ -1,0 +1,14 @@
+.env
+bin
+lib
+include
+share
+pyvenv.cfg
+*.pyc
+__pycache__/
+*~
+#*
+
+imdb.egg-info/*	
+imdb/__pycache__/*
+tests/__pycache__/*

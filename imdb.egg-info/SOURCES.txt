@@ -1,0 +1,5 @@
+setup.py
+imdb.egg-info/PKG-INFO
+imdb.egg-info/SOURCES.txt
+imdb.egg-info/dependency_links.txt
+imdb.egg-info/top_level.txt
