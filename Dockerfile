@@ -4,6 +4,8 @@ ENV IN_DOCKER 1
 
 COPY requirements.txt /requirements.txt
 
+RUN apk update
+RUN apk add postgresql-dev gcc python3-dev musl-dev libressl-dev libffi-dev
 RUN apk add --no-cache --virtual .build-deps build-base \
     && pip3 install pip --upgrade \
     && pip3 install -r /requirements.txt \
