@@ -14,9 +14,9 @@ services:
   db:
     image: postgres
     environment:
-	POSTGRES_USER: admin
-	POSTGRES_PASSWORD: admin
-	POSTGRES_DB: imdb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: imdb
     ports:
       - "5432:5432"
     volumes:
