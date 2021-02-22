@@ -2,7 +2,7 @@ from databases import Database
 import logging
 
 def setup_database(app):
-    app.db = Database(DB_URL)
+    app.db = Database(app.config.DB_URL)
 
     @app.listener('after_server_start')
     async def connect_to_db(*args, **kwargs):
