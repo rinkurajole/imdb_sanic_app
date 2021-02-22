@@ -1,15 +1,18 @@
-version: '3.5'
+version: '3.6'
 
 services:
   api:
     build: .
+    environment:
+        STAGE: test
+        SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://admin:admin@db/imdb
     ports:
       - 8080:8080
-    links:
+    depends_on:
       - database
-    restart: on-failure
+    restart: always
 
-  database:
+  db:
     image: postgres
     env_file:
       - ./.env
