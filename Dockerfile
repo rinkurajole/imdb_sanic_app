@@ -3,6 +3,7 @@ ENV PYTHONUNBUFFERED 1
 ENV IN_DOCKER 1
 
 COPY requirements.txt /requirements.txt
+COPY .env /.env
 
 RUN apk update
 RUN apk add postgresql-dev gcc python3-dev musl-dev libressl-dev libffi-dev

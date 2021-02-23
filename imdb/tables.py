@@ -1,3 +1,7 @@
+"""
+Module for exporting json file data into database
+Use: Run/Export this module from python shell
+"""
 import json
 
 from databases import Database

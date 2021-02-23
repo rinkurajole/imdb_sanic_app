@@ -1,3 +1,6 @@
+"""
+Database connection manager module.
+"""
 from databases import Database
 import logging
 

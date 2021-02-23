@@ -1,3 +1,6 @@
+"""
+Define SQLAlchemy models
+"""
 from sqlalchemy import (MetaData, Table, Column,
                         Integer, Float, String,
                         Boolean)
@@ -6,6 +9,7 @@ from sqlalchemy.dialects.postgresql import ARRAY
 
 meta = MetaData()
 
+# IMDB data model
 IMDB = Table(
     'imdb',
     meta,
@@ -17,6 +21,7 @@ IMDB = Table(
     Column('name', String(length=200)),
 )
 
+# User data model
 User = Table(
     'user',
     meta,

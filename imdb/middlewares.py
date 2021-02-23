@@ -1,3 +1,6 @@
+"""
+Add security response headers using secure python package
+"""
 from secure import SecureHeaders
 
 secure_headers = SecureHeaders()

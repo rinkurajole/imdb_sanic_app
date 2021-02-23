@@ -1,3 +1,6 @@
+"""
+User access checker decorator
+"""
 import base64
 from sanic import response
 
@@ -6,6 +9,7 @@ from .utils import match_password
 
 
 def is_user_admin(f):
+    """ Give access to user to specific function if user is admin"""
     async def wrapper(request):
         if request.headers.get('authorization'):
             token = request.headers.get('authorization')

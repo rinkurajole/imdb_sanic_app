@@ -1,5 +1,10 @@
+"""
+Main module
+Operations: Export environment vars, Setup database, Setup and Export routes, 
+            Add respose security headers using middlewares, Start Server
+"""
 from sanic import Sanic, response
-# from environs import Env
+from environs import Env
 
 from .db import setup_database
 from .settings import Settings
@@ -11,8 +16,9 @@ app = Sanic(__name__)
 
 
 def init():
-    #env = Env()
-    #env.read_env()
+    """ Invoking app run to start server"""
+    env = Env()
+    env.read_env()
     app.config.from_object(Settings)
     setup_database(app)
     setup_routes(app)
